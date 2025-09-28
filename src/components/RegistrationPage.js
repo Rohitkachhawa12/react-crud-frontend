@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./RegistrationPage.css";
-import Header from "./Header";
+import "./css/RegistrationPage.css";
+// import Header from "./Header";
 import Swal from "sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css"; // 👈 important
 
@@ -104,7 +104,7 @@ function RegistrationPage() {
   return (
     <>
       {/* 👇 Header har page ke top pe show hoga */}
-      <Header />
+      {/* <Header /> */}
 
       <div className="registration-container">
         <div className="registration-card">
