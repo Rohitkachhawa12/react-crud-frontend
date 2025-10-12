@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./css/RegistrationPage.css";
 // import Header from "./Header";
 import Swal from "sweetalert2";
-import "sweetalert2/dist/sweetalert2.min.css"; // 👈 important
 
 function RegistrationPage() {
   const [formData, setFormData] = useState({
@@ -113,28 +112,15 @@ function RegistrationPage() {
             {/* Name */}
             <div className="input-group">
               <label className="input-label">Name</label>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className="input-field"
-                placeholder="Enter your name"
-              />
+              <input type="text" name="name" value={formData.name} onChange={handleChange} className="input-field"
+                placeholder="Enter your name"/>
               {errors.name && <p className="input-error">{errors.name}</p>}
             </div>
 
             {/* Email */}
             <div className="input-group">
               <label className="input-label">Email</label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="input-field"
-                placeholder="Enter your email"
-              />
+              <input type="email" name="email" value={formData.email} onChange={handleChange} className="input-field" placeholder="Enter your email" />
               {errors.email && <p className="input-error">{errors.email}</p>}
             </div>
 
@@ -142,18 +128,8 @@ function RegistrationPage() {
             <div className="input-group">
               <label className="input-label">Password</label>
               <div className="password-wrapper">
-                <input
-                  type={showPassword ? "text" : "password"}
-                  name="password"
-                  value={formData.password}
-                  onChange={handleChange}
-                  className="input-field"
-                  placeholder="Enter your password"
-                />
-                <span
-                  className="toggle-password"
-                  onClick={() => setShowPassword(!showPassword)}
-                >
+                <input type={showPassword ? "text" : "password"} name="password" value={formData.password}  onChange={handleChange} className="input-field"  placeholder="Enter your password" />
+                <span  className="toggle-password" onClick={() => setShowPassword(!showPassword)} >
                   {showPassword ? "🙈" : "👁️"}
                 </span>
               </div>
