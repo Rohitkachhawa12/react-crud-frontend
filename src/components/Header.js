@@ -9,6 +9,7 @@ function Header() {
       <div className="logo">🌐 MyApp</div>
       <nav className="nav-links">
         <Link to="/">Home</Link>
+        <Link to="/User-List">User-List</Link>
         <Link to="/Registration">Register</Link>
         <Link to="/Login">Login</Link>
         <Link to="/about">About</Link>
